@@ -1,19 +1,20 @@
-import { FC, ReactElement } from "react";
+import { FC, PropsWithChildren, ReactElement } from "react";
 import { StyledCategory } from "./Category.style";
 // import { ProductRow } from "./ProductRow/ProductRow.component";
 
 // musi przyjmować liste <ProductRow /> i heading kategorii.
 interface CategoryProp {
     categoryHeading: string;
-    children: ReactElement;
+    children: ReactElement[];
 }
 
-export const Category:FC<CategoryProp> = (props) => {
-
+export const Category:FC<CategoryProp> = (props:PropsWithChildren<CategoryProp>) => {
     return(
         <StyledCategory>
-            <h2>{ props.categoryHeading }</h2>
-            {props.children}
+            <h2>{props.categoryHeading}</h2>
+            <ul>
+                {props.children}
+            </ul>
         </StyledCategory>
     )
 }

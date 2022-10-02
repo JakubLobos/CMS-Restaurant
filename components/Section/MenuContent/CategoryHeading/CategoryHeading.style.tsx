@@ -11,6 +11,7 @@ export const StyledCategoryHeading = styled.div`
         z-index: 2;
         margin-bottom: 61px;
 
+
             & span {
                 display: block;
                 width: 100%;
