@@ -26,9 +26,9 @@ export const MenuContent: FC = () => {
     useEffect(() => {
         async function getStaticProps() {
             const menuCategoriesArr: any = await sushiCMS.request(QUERY); //get request from api and require content from QUERY
-            setMenuCategories(menu => [...menu, menuCategoriesArr]);
+            setMenuCategories(menuCategoriesArr.menuCategories);
             console.log(menuCategoriesArr)
-            console.log(menuCategories)
+
             return {
                 props: { menuCategories }, //define props
                 revalidate: 10, // refreshing content
@@ -56,11 +56,10 @@ export const MenuContent: FC = () => {
     //     getStaticProps();
     // }, []);
 
-
     return (
         <MenuContentWrapper>
             {
-                menuCategories.map((category) => (
+                menuCategories?.map((category) => (
                     <Category categoryHeading={category.categoryName}>
                     </Category>
                 ))
@@ -83,3 +82,4 @@ export const MenuContent: FC = () => {
                     <Ingredient>Surimi</Ingredient>
                 </ProductRow>
             </Category> */}
+
