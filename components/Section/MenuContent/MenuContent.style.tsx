@@ -7,7 +7,8 @@ export const MenuContentWrapper = styled.div`
     margin: 41px 59px 41px 59px;
     display: grid;
     justify-content: center;
-    grid-template-rows: repeat(auto-fit, 373px);
-    grid-template-columns: repeat(auto-fill, minmax(300px, 817px));
-    outline: 1px solid green;
+    grid-template-rows: repeat(auto-fit, minmax(373px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(817px, auto));
+    grid-column-gap: 1.4%;
+    grid-row-gap: 50px;
 `

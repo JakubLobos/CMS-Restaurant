@@ -3,7 +3,7 @@ import { CategoryHeading } from "./MenuContent/CategoryHeading/CategoryHeading.c
 import { MenuContent } from "./MenuContent/MenuContent.component";
 import { Section } from "./Section.style";
 
-export const SubPageSection: FC = () => {
+export const MenuSection: FC = () => {
     return (
         <>
             <Section enableShadow={true}>

@@ -7,7 +7,7 @@ export const NavbarButtonsWrapper = styled.div`
     flex-direction: column;
     justify-content: space-around;
 
-    & .menuline {
+    & span {
         min-height: 3px;
         min-width: 100%;
         background-color: #FFF;

@@ -9,4 +9,8 @@ export const Ingredient = styled.li`
     display: flex;
     align-items: center;
     justify-content: center;
+        
+        &::after{
+            content:";"   
+        }
 `
